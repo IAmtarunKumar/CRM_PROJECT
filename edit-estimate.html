@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
+  data-sidebar-image="none">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smarthr - Bootstrap Admin Template">
+  <meta name="keywords"
+    content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects">
+  <meta name="author" content="Dreamstechnologies - Bootstrap Admin Template">
+  <title>Create Estimate - HRMS admin template</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+  <link rel="stylesheet" href="assets/css/line-awesome.min.css">
+
+  <link rel="stylesheet" href="assets/css/select2.min.css">
+
+  <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <div class="main-wrapper">
+
+    <div id="header-placeholder"></div>
+
+    <div id="sidebar-placeholder"></div>
+
+
+    <div class="page-wrapper">
+
+      <div class="content container-fluid">
+
+        <div class="page-header">
+          <div class="row">
+            <div class="col-sm-12">
+              <h3 class="page-title">Edit Estimate</h3>
+              <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="admin-dashboard.html">Dashboard</a></li>
+                <li class="breadcrumb-item active">Edit Estimate</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <form id="create-estimate-form">
+              <div class="row">
+                <div class="col-sm-6 col-md-4">
+                  <div class="input-block mb-3">
+                    
+                  <div class="d-flex justify-content-between">
+                    <label class="col-form-label">Assign Project <span class="text-danger">*</span></label>
+                    <!-- <span class="text-danger text-size " style="font-size: 10px;" ><i class="fa-solid fa-times"></i> Enter Valid Name</span> -->
+                  </div>
+                    <select name="" id="project_select_option" class="form-control">
+                      <option value="" selected disabled>Select Assign Project</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                  <div class="input-block mb-3">
+                    <div class="d-flex justify-content-between">
+                      
+                      <label class="col-form-label">Client Name</label>
+                    </div>
+                    <select name="" id="client_select_option" class="form-control" disabled style="background-color: #e9e9ea !important;">
+                      <option value="" selected disabled>Select Client's Name</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                  <div class="input-block mb-3">                     
+                      <label class="col-form-label">Email</label>
+                    <input id="email" class="form-control" type="email" placeholder="Select Client" disabled>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                  <div class="input-block mb-3">
+                      <div class="d-flex justify-content-between">
+                        <label class="col-form-label">Estimate date <span class="text-danger">*</span></label>
+                      </div>
+                      <input id="estimateDate" class="form-control" type="date">
+                    
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                  <div class="input-block mb-3">
+                    
+                    <div class="d-flex justify-content-between">
+                      <label class="col-form-label">Expiry Date <span class="text-danger">*</span></label>
+                    </div>
+                      <input id="expiryDate" class="form-control" type="date">
+                    
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                  <div class="input-block mb-3">
+                  <div class="d-flex justify-content-between" >
+                    <label class="col-form-label">Tax Type</label>
+                  </div>
+                    <select class="form-control" id="taxType">
+                      <option value="" disabled="" selected="">Select Tax</option>
+                      <option value="GST">GST</option>
+                      <option value="VAT">VAT</option>
+                    </select>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6 col-md-6">
+                  <div class="input-block mb-3">
+                    
+                      <label class="col-form-label">Client Address</label>
+
+                    <textarea id="clientAddress" class="form-control" placeholder="Select Client" rows="3" disabled></textarea>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                  <div class="input-block mb-3">
+
+                    <div class="d-flex justify-content-between">
+                      <label class="col-form-label">Billing Address</label>
+                    </div>
+
+                    <textarea id="billingAddress" class="form-control" rows="3"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 col-sm-12">
+                  <div class="table-responsive">
+                    <table class="table table-hover table-white" id="addTable">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th class="col-sm-2">Item</th>
+                          <th class="col-md-6">Description</th>
+                          <th>Unit Cost</th>
+                          <th>Qty</th>
+                          <th>Amount (₹)</th>
+                          <th> </th>
+                        </tr>
+                      </thead>
+                      <tbody class="tbodyone" id="esitmate_table_dym_row">
+                        <tr>
+                          <td>1</td>
+                          <td>
+                            <input class="form-control item" type="text">
+                          </td>
+                          <td>
+                            <input class="form-control description" type="text">
+                          </td>
+                          <td>
+                            <input class="form-control unitCost" value="0" type="number"  onkeypress="return ((event.charCode == 46) || (event.charCode >= 48 && event.charCode <= 57))">
+                          </td>
+                          <td>
+                            <input value="0" class="form-control quantity" type="number"  onkeypress="return ((event.charCode >= 48 && event.charCode <= 57))">
+                          </td>
+                          <td>
+                            <input class="form-control invoiceAmount " disabled  value="0" type="text">
+                          </td>
+                          <td>
+                            <a href="javascript:void(0)" onclick="addInvoiceTableRow('addTable')"  class="text-success font-18" title="Add"><i class="fa-solid fa-plus"></i></a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="table-responsive">
+                    <table class="table  table-white">
+                      <tbody>
+                        
+                        <tr>
+                          <td class="">Total (in ₹)</td>
+                          <td id="" class="text-end ">
+                            <input id="totalAmount"  class="form-control text-end" value="₹ 0" type="numbers" disabled>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class=""> Discount (in %) </td>
+                          <td class="text-end">
+                            <input id="discount" class="form-control text-end" value="0" type="number"  onkeypress="return ((event.charCode == 46) || (event.charCode >= 48 && event.charCode <= 57))">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="">Tax (in %)</td>
+                          <td class="text-end">
+                            <input  id="tax" class="form-control text-end" value="0" type="number"  onkeypress="return ((event.charCode == 46) || (event.charCode >= 48 && event.charCode <= 57))">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="">
+                            <b id="">Grand Total (in ₹)</b>
+                          </td>
+                          <td class="text-end tdata-width">
+                            <input id="grandTotal"  class="form-control text-end" value="₹ 0" type="numbers" style="font-weight: bolder;" disabled>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="input-block mb-3">
+                        <label class="col-form-label">Other Information</label>
+                        <textarea class="form-control" id="otherInfo" rows="4"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="submit-section">
+                <!-- <button class="btn btn-primary submit-btn m-r-10">Save & Send</button> -->
+                <button type="submit" class="btn btn-primary submit-btn">Save</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  
+  <script src="assets/js/jquery-3.7.1.min.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="module" src="./assets/custom/edit-estimate.js"></script>
+
+
+  <script src="assets/js/bootstrap.bundle.min.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+
+  <script src="assets/js/jquery.slimscroll.min.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+
+  <script src="assets/plugins/morris/morris.min.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+  <script src="assets/plugins/raphael/raphael.min.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+  <script src="assets/js/chart.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+  <script src="assets/js/greedynav.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+
+  <script src="assets/js/layout.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+  <script src="assets/js/theme-settings.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+
+  <script src="assets/js/app.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+    data-cf-settings="a584005f29a7ae81ebc6d9e7-|49" defer></script>
+
+</body>
+<script src="./assets/custom/sidebar.js"></script>
+
+
+<!-- Mirrored from smarthr.dreamstechnologies.com/html/template/create-estimate.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Sep 2024 06:26:28 GMT -->
+
+</html>

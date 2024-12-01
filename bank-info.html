@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
+  data-sidebar-image="none">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords"
+    content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects">
+  <meta name="author" content="">
+  <title>Bank Info</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/fevicons.png">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+  <link rel="stylesheet" href="assets/css/line-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/material.css">
+
+  <link rel="stylesheet" href="assets/css/select2.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <div class="main-wrapper">
+
+    <div id="header-placeholder"></div>
+
+    <div id="sidebar-placeholder"></div>
+
+
+    <div class="page-wrapper">
+
+      <div class="content container-fluid">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="page-header">
+              <div class="row">
+                <div class="col-sm-12">
+                  <h3 class="page-title">Employee Details</h3>
+                </div>
+              </div>
+            </div>
+
+            <form id="add_bank-details">
+              <!-- Employee Name and Email Section -->
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="input-block mb-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <label class="col-form-label">Employee Name <span class="text-danger">*</span></label>
+                    </div>
+                    <select class="form-control" id="employeeSelect" required>
+                      <option value="" disabled selected>Select Employee</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="input-block mb-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <label class="col-form-label">Email <span class="text-danger">*</span></label>
+                    </div>
+                    <input class="form-control" type="email" id="email" placeholder="Select Employee for Email" disabled>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Bank Details Section -->
+              <div class="page-header">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h3 class="page-title">Bank Details</h3>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Bank Name and Account Number -->
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="input-block mb-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <label class="col-form-label">Bank Name <span class="text-danger">*</span></label>
+                    </div>
+                    <input class="form-control" type="text" id="bankName" placeholder="Enter Bank Name" required>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="input-block mb-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <label class="col-form-label">Account Number <span class="text-danger">*</span></label>
+                    </div>
+                    <input class="form-control" type="text" id="accountNumber" placeholder="Enter Account Number" required>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- IFSC Code and Branch Name -->
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="input-block mb-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <label class="col-form-label">IFSC Code<span class="text-danger">*</span></label>
+                    </div>
+                    <input class="form-control" type="text" id="IFSCCode" placeholder="Enter IFSC Code"
+                      oninput="this.value = this.value.toUpperCase()" required>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="input-block mb-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <label class="col-form-label">Branch Name <span class="text-danger">*</span></label>
+                    </div>
+                    <input class="form-control" type="text" id="branchName" placeholder="Enter Branch Name" required>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Account Type and PAN Number -->
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="input-block mb-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <label class="col-form-label">Account Type <span class="text-danger">*</span></label>
+                    </div>
+                    <select class="form-control" id="accountType" required>
+                      <option value="" disabled selected>Select Account Type</option>
+                      <option value="Savings">Savings</option>
+                      <option value="Current">Current</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="input-block mb-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <label class="col-form-label">PAN Number <span class="text-danger">*</span></label>
+                    </div>
+                    <input class="form-control" type="text" id="uppercaseInput" placeholder="Enter PAN Number"
+                      oninput="this.value = this.value.toUpperCase()" required>
+                  </div>
+                </div>
+            
+                <div class="col-sm-6">
+                  <div class="input-block mb-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <label class="col-form-label">Account Holder Name <span class="text-danger">*</span></label>
+                    </div>
+                    <input class="form-control" type="text" id="holderName" placeholder="Account Holder Name" required>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Submit Button -->
+              <div class="submit-section">
+                <button id="submitBankDetails" class="btn btn-primary submit-btn" type="button">Save</button>
+              </div>
+            </form>
+            
+
+
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+  <script type="module" src="./assets/custom/bank-info.js"></script>
+
+
+  <script src="assets/js/jquery-3.7.1.min.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+  <script src="assets/js/bootstrap.bundle.min.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+
+  <script src="assets/js/jquery.slimscroll.min.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+
+  <script src="assets/plugins/morris/morris.min.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+  <script src="assets/plugins/raphael/raphael.min.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+
+  <script src="assets/js/greedynav.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+
+  <script src="assets/js/layout.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+  <script src="assets/js/theme-settings.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+
+  <script src="assets/js/app.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+
+  <script src="https://cdnjs.cloudflare.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+    data-cf-settings="a584005f29a7ae81ebc6d9e7-|49" defer></script>
+
+</body>
+<script src="./assets/custom/sidebar.js"></script>
+
+
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  data-layout="vertical"
+  data-topbar="light"
+  data-sidebar="dark"
+  data-sidebar-size="lg"
+  data-sidebar-image="none"
+>
+  <head>
+    <style>
+      #view-gender::first-letter {
+          text-transform: uppercase;
+      }
+      #view-status::first-letter {
+          text-transform: uppercase;
+      }
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta
+      name="keywords"
+      content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects"
+    />
+    <meta name="author" content="" />
+    <title>User Profile</title>
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/fevicons.png"
+    />
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="assets/plugins/fontawesome/css/fontawesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css" />
+
+    <link rel="stylesheet" href="assets/css/line-awesome.min.css" />
+    <link rel="stylesheet" href="assets/css/material.css" />
+
+    <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css" />
+
+    <link rel="stylesheet" href="assets/css/select2.min.css" />
+
+    <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <div class="main-wrapper">
+      <div id="header-placeholder"></div>
+
+      <div id="sidebar-placeholder"></div>
+      
+
+        <div class="page-wrapper">
+
+            <div class="content container-fluid pb-0">
+
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h3 class="page-title">Profile</h3>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="admin-dashboard.html">Dashboard</a></li>
+                                <li class="breadcrumb-item active">Profile</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-0">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                              <div class="profile-view">
+                                <div class="profile-img-wrap">
+                                  <div class="profile-img">
+                                    <a href="#"><img id="file-display" src="assets/img/profiles/avatar-02.jpg" alt="User Image"></a>
+                                  </div>
+                                </div>
+                                <div class="profile-basic">
+                                  <div class="row">
+              
+                                    <div class="col-md-5">
+                                      <ul class="personal-info">
+                                        <li>
+                                          <div class="title">Name:</div>
+                                          <div class="text"><a id="name" href="#">Lavinia Kidd</a></div>
+                                        </li>
+                                        <li>
+                                          <div class="title">Phone:</div>
+                                          <div class="text"><a id="mobile" href="#">23-May-2008</a></div>
+                                        </li>
+                                        <li>
+                                          <div class="title">Email:</div>
+                                          <div class="text"><a id="email" href="#">shivaur@gmail.com</a></div>
+                                        </li>
+                                        <!-- <li>
+                                          <div class="title">DOB:</div>
+                                          <div class="text"><a id="DOB" href="#">05-Apr-1996</a></div>
+                                        </li> -->
+                                        <li>
+                                          <div class="title">Address:</div>
+                                          <div class="text"><a id="address" href="#">07-Jun-1981</a></div>
+                                        </li>
+                                        <li>
+                                          <div class="title">Gender:</div>
+                                          <div class="text"><a id="gender" href="#">Female</a></div>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="pro-edit">
+                                  <a data-bs-target="#profile_info" data-bs-toggle="modal" class="edit-icon" href="#">
+                                    <i class="fa-solid fa-pencil"></i>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                </div>
+                <div class="card tab-box mt-4">
+                    <div class="row user-tabs">
+                        <div class="col-lg-12 col-md-12 col-sm-12 line-tabs">
+                            <ul class="nav nav-tabs nav-tabs-bottom">
+                                <li class="nav-item" role="presentation">
+                                    <a href="#emp_projects" aria-selected="true" data-bs-toggle="tab"
+                                        class="nav-link active" >Projects</a>
+                                    </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane fade active show" id="emp_projects">
+                        <div class="row">
+                            <div id="project-details" class="col-lg-4 col-sm-6 col-md-4 col-xl-3"></div>
+                            <!-- <div class="col-lg-4 col-sm-6 col-md-4 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="dropdown profile-action">
+                                            <a aria-expanded="false" data-bs-toggle="dropdown"
+                                                class="action-icon dropdown-toggle" href="#"><i
+                                                    class="material-icons">more_vert</i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a data-bs-target="#edit_project" data-bs-toggle="modal" href="#"
+                                                    class="dropdown-item"><i class="fa-solid fa-pencil m-r-5"></i>
+                                                    Edit</a>
+                                                <a data-bs-target="#delete_project" data-bs-toggle="modal" href="#"
+                                                    class="dropdown-item"><i class="fa-regular fa-trash-can m-r-5"></i>
+                                                    Delete</a>
+                                            </div>
+                                        </div>
+                                        <h4 class="project-title"><a href="project-view.html">Water Treatment Plant</a></h4>
+                                        <small class="block text-ellipsis m-b-15">
+                                            <span class="text-xs">12</span> <span class="text-muted">open tasks, </span>
+                                            <span class="text-xs">4</span> <span class="text-muted">tasks
+                                                completed</span>
+                                        </small>
+                                        <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and
+                                            typesetting industry. When an unknown printer took a galley of type and
+                                            scrambled it...
+                                        </p>
+                                        <div class="pro-deadline m-b-15">
+                                            <div class="sub-title">
+                                                Deadline:
+                                            </div>
+                                            <div class="text-muted">
+                                                17 Apr 2019
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="profile_info" class="modal custom-modal fade" role="dialog">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Profile Information</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="profile-img-wrap edit-img">
+                                            <img class="inline-block" src="assets/img/profiles/avatar-02.jpg"
+                                                alt="">
+                                            <div class="fileupload btn">
+                                                <span class="btn-text">edit</span>
+                                                <input class="upload" type="file">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="input-block mb-3">
+                                                    <label class="col-form-label">Name</label>
+                                                    <input type="text" class="form-control" id="name">
+                                                </div>
+                                            </div>
+                                            <!-- <div class="col-md-6">
+                                                <div class="input-block mb-3">
+                                                    <label class="col-form-label">Last Name</label>
+                                                    <input type="text" class="form-control" value="Doe">
+                                                </div>
+                                            </div> -->
+                                            <div class="col-md-6">
+                                                <div class="input-block mb-3">
+                                                    <label class="col-form-label">Birth Date</label>
+                                                    <div class="cal-icon">
+                                                        <input class="form-control datetimepicker" type="text"
+                                                            value="05/06/1985">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-block mb-3">
+                                                    <label class="col-form-label">Gender</label>
+                                                    <select class="select form-control">
+                                                        <option value="male selected">Male</option>
+                                                        <option value="female">Female</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="input-block mb-3">
+                                            <label class="col-form-label">Email</label>
+                                            <input type="text" class="form-control" id="email">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-block mb-3">
+                                            <label class="col-form-label">State</label>
+                                            <input type="text" class="form-control" value="New York">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-block mb-3">
+                                            <label class="col-form-label">Country</label>
+                                            <input type="text" class="form-control" value="United States">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-block mb-3">
+                                            <label class="col-form-label">Pin Code</label>
+                                            <input type="text" class="form-control" value="10523">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-block mb-3">
+                                            <label class="col-form-label">Phone Number</label>
+                                            <input type="text" class="form-control" id="mobile">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-block mb-3">
+                                            <label class="col-form-label">Department <span
+                                                    class="text-danger">*</span></label>
+                                            <select class="select">
+                                                <option>Select Department</option>
+                                                <option>Web Development</option>
+                                                <option>IT Management</option>
+                                                <option>Marketing</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-block mb-3">
+                                            <label class="col-form-label">Designation <span
+                                                    class="text-danger">*</span></label>
+                                            <select class="select">
+                                                <option>Select Designation</option>
+                                                <option>Web Designer</option>
+                                                <option>Web Developer</option>
+                                                <option>Android Developer</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-block mb-3">
+                                            <label class="col-form-label">Reports To <span
+                                                    class="text-danger">*</span></label>
+                                            <select class="select">
+                                                <option>-</option>
+                                                <option>Wilmer Deluna</option>
+                                                <option>Lesley Grauer</option>
+                                                <option>Jeffery Lalor</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="submit-section">
+                                    <button class="btn btn-primary submit-btn">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal custom-modal fade" id="Add_block" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <div class="form-header">
+                        <h3>Add District and Block</h3>
+                      </div>
+                      <div class="modal-btn delete-action">
+                        <div class="row">
+                          <!-- <div class="col-6">
+                            <a
+                              href="javascript:void(0);"
+                              id="exportButton"
+                              class="btn btn-primary continue-btn"
+                              data-bs-dismiss="modal"n
+                              >Download</a
+                            >
+                          </div>
+                          <div class="col-6">
+                            <a
+                              id="cancelButton"
+                              href="javascript:void(0);"
+                              data-bs-dismiss="modal"
+                              class="btn btn-primary cancel-btn"
+                              >Cancel</a
+                            >
+                          </div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+    </div>
+
+ </div>
+ 
+
+ 
+ <script type="module" src="./assets/custom/contractorView.js"></script>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script src="./assets/custom/sidebar.js"></script>
+
+
+ <script
+   src="assets/js/bootstrap.bundle.min.js"
+   type="a584005f29a7ae81ebc6d9e7-text/javascript"
+ ></script>
+
+ <script
+   src="assets/js/jquery.slimscroll.min.js"
+   type="a584005f29a7ae81ebc6d9e7-text/javascript"
+ ></script>
+
+ <script
+   src="assets/plugins/morris/morris.min.js"
+   type="a584005f29a7ae81ebc6d9e7-text/javascript"
+ ></script>
+
+ <script
+   src="assets/js/chart.js"
+   type="a584005f29a7ae81ebc6d9e7-text/javascript"
+ ></script>
+ <script
+   src="assets/js/greedynav.js"
+   type="a584005f29a7ae81ebc6d9e7-text/javascript"
+ ></script>
+
+ <script
+   src="assets/js/layout.js"
+   type="a584005f29a7ae81ebc6d9e7-text/javascript"
+ ></script>
+ <script
+   src="assets/js/theme-settings.js"
+   type="a584005f29a7ae81ebc6d9e7-text/javascript"
+ ></script>
+
+ <script
+   src="assets/js/app.js"
+   type="a584005f29a7ae81ebc6d9e7-text/javascript"
+ ></script>
+ <script
+   src="https://cdnjs.cloudflare.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+   data-cf-settings="a584005f29a7ae81ebc6d9e7-|49"
+   defer
+ ></script>
+
+</body>
+</html>

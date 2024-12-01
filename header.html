@@ -1,0 +1,76 @@
+<div class="header-container" id="header-placeholder">
+  <div class="header role-class">
+    <div class="header-left">
+      <a href="#" class="logo">
+        <img src="assets/img/blur-shivaur-1.png" width="128" alt="Logo" />
+      </a>
+      <a href="#" class="logo collapse-logo">
+        <img src="assets/img/fevicon-shivaur.png" alt="Logo" />
+      </a>
+      <a href="#" class="logo2">
+        <img src="assets/img/fevicon-shivaur.png" width="40" height="40" alt="Logo" />
+      </a>
+    </div>
+
+    <a id="toggle_btn" href="javascript:void(0);">
+      <span class="bar-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </a>
+
+    <a id="mobile_btn" class="mobile_btn" href="#sidebar"><i class="fa-solid fa-bars"></i></a>
+
+    <ul class="nav user-menu">
+      <!-- <li class="nav-item">
+        <div class="top-nav-search">
+          <a href="javascript:void(0);" class="responsive-search"><i class="fa-solid fa-magnifying-glass"></i></a>
+          <form action="#">
+            <input class="form-control" type="text" placeholder="Search here" />
+            <button class="btn" type="submit" data-bs-dismiss="modal"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+        </div>
+      </li> -->
+
+      <li class="nav-item dropdown">
+        <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+          <i class="fa-regular fa-bell"></i>
+          <span class="badge rounded-pill">3</span>
+        </a>
+        <!-- Notification dropdown content -->
+      </li>
+
+      <li class="nav-item dropdown has-arrow main-drop">
+        <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+          <span class="user-img"><img src="assets/img/profiles/avatar-02.jpg" alt="User Image" />
+            <span class="status online"></span></span>
+          <span id="role"></span> <!-- Role is updated dynamically here -->
+        </a>
+        <div id="pages" class="dropdown-menu">
+          <a id="profile" class="dropdown-item" href="profile.html">My Profile</a>
+          <a class="dropdown-item"    href="addUser.html">Add User</a>
+          <a class="dropdown-item logoutBtn" href="#">Logout</a>
+        </div>
+      </li>
+    </ul>
+
+    <div class="dropdown mobile-user-menu">
+      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a class="dropdown-item" href="profile.html">My Profile</a>
+        <a  class="dropdown-item"   href="addUser.html">Add User</a>
+        <a class="dropdown-item logoutBtn" href="#">Logout</a>
+      </div>
+    </div>
+
+    <!-- Admin specific options, shown conditionally via JavaScript -->
+    <!-- <div id="admin-options" style="display: none;">
+      <a href="admin-settings.html">Admin Settings</a>
+    </div> -->
+  </div>
+</div>
+<script src="./assets/custom/user.js"></script>
+ <script src="./assets/custom/logout.js"></script>
+ <script src="./assets/custom/profile.js"></script>
+ 

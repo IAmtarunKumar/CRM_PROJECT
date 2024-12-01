@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Product Management Page" />
+    <meta name="keywords" content="admin, products, bootstrap, inventory, business, corporate" />
+    <meta name="author" content="YourCompany" />
+    <title>Products - Admin Template</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/fevicon.png" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/line-awesome.min.css" />
+    <link rel="stylesheet" href="assets/css/material.css" />
+    <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="assets/css/select2.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div id="header-placeholder"></div>
+        <div id="sidebar-placeholder"></div>
+
+        <div class="page-wrapper">
+            <div class="product-form mx-4 my-3">
+                <div class="my-4">
+                    <h2>Edit Product</h2>
+                </div>
+                
+                <form id="add_product_form">
+                    <div class="row">
+                      
+                      <div class="col-sm-6">
+                          <div class="input-block mb-3">
+                            <div class="d-flex align-items-center justify-content-between">
+                              <label class="col-form-label">Product Name <span class="text-danger">*</span></label>
+                            </div>
+                              <input class="form-control" type="text" id="productName" placeholder="Enter Product Name" />
+                          </div>
+                      </div>
+                      <div class="col-sm-6">
+                          <div class="input-block mb-3">
+                            <div class="d-flex align-items-center justify-content-between">
+                              <label class="col-form-label">Category <span class="text-danger">*</span></label>
+                            </div>
+                              <select id="category_select" class="form-control">
+                                  <option value="" disabled selected>Select Category</option>
+                                </select>
+                          
+                          </div>
+                      </div>
+                
+                      <div class="col-sm-6">
+                          <div class="input-block mb-3">
+                            <div class="d-flex align-items-center justify-content-between">
+                              <label class="col-form-label">Price <span class="text-danger">*</span></label>
+                            </div>
+                              <input class="form-control" type="number" id="price" value="0" min="0" onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
+                          </div>
+                      </div>
+                      <div class="col-sm-6">
+                          <div class="input-block mb-3">
+                            <div class="d-flex align-items-center justify-content-between">
+                              <label class="col-form-label">Status <span class="text-danger">*</span></label>
+                            </div>
+                              <select class="form-control" id="status">
+                                  <option value="" disabled selected>Select Status</option>
+                                  <option value="Available">Available</option>
+                                  <option value="Out of Stock">Out of Stock</option>
+                                  <option value="Discontinued">Discontinued</option>
+                              </select>
+                          </div>
+                      </div>
+                  
+                      <div class="col-sm-6">
+                          <div class="input-block mb-3">
+                            <div class="d-flex align-items-center justify-content-between">
+                              <label class="col-form-label">Stock Quantity <span class="text-danger">*</span></label>
+                            </div>
+                              <input class="form-control" type="number" id="quantity" value="0" min="0" onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
+                          </div>
+                      </div>
+                      <div class="col-sm-6">
+                          <div class="input-block mb-3">
+                            <div class="d-flex align-items-center justify-content-between">
+                              <label class="col-form-label">Supplier Name <span class="text-danger">*</span></label>
+                            </div>
+                              <input class="form-control" type="text" id="supplier" placeholder="Enter Supplier Name" />
+                          </div>
+                      </div>
+                  
+                      <div class="col-sm-6">
+                          <div class="input-block mb-3">
+                            <div class="d-flex align-items-center justify-content-between">
+                              <label class="col-form-label">Purchage Date <span class="text-danger">*</span></label>
+                            </div>
+                              <input class="form-control" type="date" id="purchaseDate" />
+                          </div>
+                      </div>
+                    </div>
+                
+                    <div class="input-block mb-3">
+                        <label class="col-form-label">Description</label>
+                        <textarea rows="4" id="description" class="form-control" placeholder="Product description"></textarea>
+                    </div>
+                    
+                <div class="row d-none " id="uploaded_files">
+                  <div class="col-md-12">
+                    <label class="col-form-label">Uploaded Files</label>
+                    
+                    <div class="table-responsive">
+                      <table class="table table-hover table-white">
+                        <thead>
+                          <tr>
+                            <th class="col-sm-1">#</th>
+                            <th class="col-sm-10">Files</th>
+                            <th class="col-sm-1 text-center"> Action</th>
+                          </tr>
+                        </thead>
+                        <tbody   id="uploaded_files_tbodyone">
+                          <!-- <tr>
+                            <td>1</td>
+                            <td>
+                               <input class="form-control" type="name" disabled id="paymentDate">
+                            </td>
+                            <td class="text-center">
+                              <a href="javascript:void(0)" class="text-success font-18 "><i class="fa-solid fa-eye"></i></a>
+                            </td>
+                          </tr> -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                
+                    <div class="input-block mb-1">
+                        <label class="col-form-label">Upload New Files</label>
+                        <input class="form-control" id="product-file" type="file" multiple />
+                    </div>
+                
+                    <div class="submit-section mb-4">
+                        <button class="btn btn-primary submit-btn" id="submitProduct" type="submit">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Scripts -->
+    <script type="module" src="./assets/custom/edit-product.js"></script>
+    <script
+    src="assets/js/jquery-3.7.1.min.js"
+    type="a584005f29a7ae81ebc6d9e7-text/javascript"
+  ></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script
+    src="assets/js/bootstrap.bundle.min.js"
+    type="a584005f29a7ae81ebc6d9e7-text/javascript"
+  ></script>
+
+  <script
+    src="assets/js/jquery.slimscroll.min.js"
+    type="a584005f29a7ae81ebc6d9e7-text/javascript"
+  ></script>
+
+  <script
+    src="assets/plugins/morris/morris.min.js"
+    type="a584005f29a7ae81ebc6d9e7-text/javascript"
+  ></script>
+  <script
+    src="assets/plugins/raphael/raphael.min.js"
+    type="a584005f29a7ae81ebc6d9e7-text/javascript"
+  ></script>
+  <script
+    src="assets/js/chart.js"
+    type="a584005f29a7ae81ebc6d9e7-text/javascript"
+  ></script>
+  <script
+    src="assets/js/greedynav.js"
+    type="a584005f29a7ae81ebc6d9e7-text/javascript"
+  ></script>
+
+  <script
+    src="assets/js/layout.js"
+    type="a584005f29a7ae81ebc6d9e7-text/javascript"
+  ></script>
+  <script
+    src="assets/js/theme-settings.js"
+    type="a584005f29a7ae81ebc6d9e7-text/javascript"
+  ></script>
+
+  <script
+    src="assets/js/app.js"
+    type="a584005f29a7ae81ebc6d9e7-text/javascript"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+    data-cf-settings="a584005f29a7ae81ebc6d9e7-|49"
+    defer
+  ></script>
+    <script src="./assets/custom/sidebar.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  data-layout="vertical"
+  data-topbar="light"
+  data-sidebar="dark"
+  data-sidebar-size="lg"
+  data-sidebar-image="none"
+>
+  <!-- Mirrored from smarthr.dreamstechnologies.com/html/template/tasks.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Sep 2024 06:20:58 GMT -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Smarthr - Bootstrap Admin Template" />
+    <meta
+      name="keywords"
+      content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects"
+    />
+    <meta
+      name="author"
+      content="Dreamstechnologies - Bootstrap Admin Template"
+    />
+    <title>Tasks - HRMS admin template</title>
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/fevicon.png"
+    />
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="assets/plugins/fontawesome/css/fontawesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css" />
+
+    <link rel="stylesheet" href="assets/css/line-awesome.min.css" />
+    <link rel="stylesheet" href="assets/css/material.css" />
+
+    <link rel="stylesheet" href="assets/css/select2.min.css" />
+
+    <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css" />
+
+    <link rel="stylesheet" href="assets/css/ckeditor.css" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div id="header-placeholder"></div>
+
+      <div id="sidebar-placeholder"></div>
+
+
+      <div class="page-wrapper">
+        <div class="edit-task-form mx-4 my-3">
+          
+          <div class="col my-4">
+            <h3 class="page-title">Edit Project</h3>
+            <ul class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="project-list.html">Dashboard</a>
+              </li>
+              <li class="breadcrumb-item ">Edit Project</li>
+            </ul>
+          </div>
+          
+                          <form id="update_project_form">
+                            <div class="row">
+
+                              <div class="col-sm-6">
+                                <div class="input-block mb-3">
+                                  <div class="d-flex align-items-center justify-content-between">
+                                    <label class="col-form-label">Project Name <span class="text-danger">*</span></label>
+                                  </div>
+                                  <input class="form-control" type="text" id="projectName" placeholder="Enter Project's Name" />
+                                  <input class="form-control" type="text" id="id_hidden" hidden  />
+                                </div>
+                              </div>
+                              
+                              <div class="col-sm-6">
+                                <div class="input-block mb-3">
+                                  <div class="d-flex align-items-center justify-content-between">
+                                    <label class="col-form-label">Status <span class="text-danger">*</span></label>
+                                  </div>
+                                  <select class="form-control" id="statuss">
+                                    <option value="" disabled selected>Select Status</option>
+                                    <option value="Active">Active</option>
+                                    <option value="Inactive">Inactive</option>
+                                    <option value="Hold">Hold</option>
+                                    <option value="In-Progress">In-Progress</option>
+                                    <option value="Pending">Pending</option>
+                                    <option value="Completed">Completed</option>
+                                    <option value="Closed">Closed</option>
+                                  </select>
+                                </div>
+                              </div>
+                              
+                              <div class="col-sm-6">
+                                <div class="input-block mb-3">
+                                  <div class="d-flex align-items-center justify-content-between">
+                                    <label class="col-form-label">Client Name <span class="text-danger">*</span></label>
+                                  </div>
+                                  <select name="" id="client_select_option" class="form-control">
+                                    <option value="" selected disabled>Select Client's Name</option>
+                                  </select>
+                                </div>
+                              </div>
+                
+                              <div class="col-sm-6">
+                                <div class="input-block mb-3">
+                                  <div class="d-flex align-items-center justify-content-between">
+                                    <label class="col-form-label">Assign Project <span class="text-danger">*</span></label>
+                                  </div>
+                                  <select name="" id="emp_select_option" class="form-control">
+                                    <option value="" disabled selected>Select Assign Project</option>
+                                  </select>
+                                </div>
+                              </div>
+                              
+                              <div class="col-sm-6">
+                                <div class="input-block mb-3">
+                                  <div class="d-flex align-items-center justify-content-between">
+                                    <label class="col-form-label">Start Date <span class="text-danger">*</span></label>
+                                  </div>
+                                  <input class="form-control" type="date" id="startDate" />
+                                </div>
+                              </div>
+                
+                              <div class="col-sm-6">
+                                <div class="input-block mb-3">
+                                  <div class="d-flex align-items-center justify-content-between">
+                                    <label class="col-form-label">DeadLine <span class="text-danger">*</span></label>
+                                  </div>
+                                  <input class="form-control" type="date" id="deadline" />
+                                </div>
+                              </div>    
+                                    
+                <hr>
+                              <div class="col-sm-6">
+                                <div class="input-block mb-3">
+                                  <div class="d-flex align-items-center justify-content-between">
+                                    <label class="col-form-label">Price <span class="text-danger">*</span></label>
+                                  </div>
+                                  <input placeholder="" class="form-control" min="0" onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="number" id="price" value="0"/>
+                                </div>
+                              </div>
+                              <div class="col-sm-6">
+                                <div class="row">
+                                  <div class="col-sm-6">
+                                    <div class="row">
+                                      <div class="col-md-6">
+                                        <div class="input-block mb-3">
+                                          <div class="d-flex align-items-center justify-content-between">
+                                            <label class="col-form-label">Tax Value(in %) <span class="text-danger">*</span></label>
+                                          </div>
+                                          <input placeholder="" class="form-control" type="number" value="0" id="tax" step="0.01" min="0" />
+                                        </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                        <div class="input-block mb-3">
+                                          <label class="col-form-label">Tax Value (in ₹)</label>
+                                          <input placeholder="" class="form-control" type="number" min="0" value="0" id="tax_rs" disabled   />
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-6">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                      <label class="col-form-label">Tax Type <span class="text-danger">*</span></label>
+                                    </div>
+                                    <select class="form-control" id="taxType">
+                                      <option value="" disabled="" selected="">Select Tax</option>
+                                      <option value="GST">GST</option>
+                                      <option value="VAT">VAT</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <div class="col-sm-6">
+                                <div class="row">
+                                  <div class="col-sm-6">
+                                    <div class="input-block mb-3">
+                                      <div class="d-flex align-items-center justify-content-between">
+                                        <label class="col-form-label">Discount (in %) <span class="text-danger">*</span></label>
+                                      </div>
+                                      <input placeholder="" class="form-control" type="number" min="0" id="discount_p" value="0"/>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-6">
+                                    <div class="input-block mb-3">
+                                      <div class="d-flex align-items-center justify-content-between">
+                                        <label class="col-form-label">Discount (in ₹)<span class="text-danger">*</span></label>
+                                      </div>
+                                      <input placeholder="" class="form-control" type="number" min="0" onkeypress="return event.charCode >= 48 && event.charCode <= 57" id="discount_rs" value="0"/>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-6">
+                                <div class="input-block mb-3">
+                                  <div class="d-flex align-items-center justify-content-between">
+                                    <label class="col-form-label">Total Calculated Amount <span class="text-danger">*</span></label>
+                                  </div>
+                                  <input placeholder="" class="form-control" type="number" id="totalPrice" value="0" disabled />
+                                </div>
+                              </div>
+                            </div>
+                <!-- <hr> -->
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="d-flex align-items-center justify-content-between">
+                                  <label class="col-form-label">Payment Section <span class="text-danger">*</span></label>
+                                </div>
+                                
+                                <div class="table-responsive">
+                                  <table class="table table-hover table-white" id="addTable">
+                                    <thead>
+                                      <tr>
+                                        <th>#</th>
+                                        <th class="col-sm-2">Payment Date</th>
+                                        <th class="col-md-6">Amount</th>
+                                        <th class="col-md-6"> Status</th>
+                                        <th class="col-md-6">Payment Complition Date</th>
+                                        <th> Action</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody class="tbodyone tbodyone-installment">
+                                      <tr>
+                                        <td>1</td>
+                                        <td>
+                                           <input class="form-control paymentDate" type="date" id="paymentDate">
+                                        </td>
+                                        <td>
+                                          <input class="form-control paymentAmount" type="number" id="paymentAmount" min="0" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                                        </td>
+                                        <td>
+                                          <!-- <input class="form-control description" type="text"> -->
+                                          <select class="form-control" id="paymentStatus">
+                                            <option value="" disabled="" selected="">Select Status</option>
+                                            <option value="Active">Paid</option>
+                                            <option value="Pending">Pending</option>
+                                          </select>
+                                        </td>
+                                        <td>
+                                          <input class="form-control" type="date" id="paidDate">
+                                        </td>
+                                        <td class="text-center">
+                                          <a href="javascript:void(0)" class="text-success font-18 addProduct" onclick="addInvoiceTableRow('addTable')" title="Add"><i
+                                              class="fa-solid fa-plus"></i></a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                <hr>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <label class="col-form-label"> Section <span class="text-danger">*</span></label>
+                    </div>
+                    
+                    <div class="table-responsive">
+                      <table class="table table-hover table-white" id="agreementTable">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th class="col-sm-2">Select</th>
+                            <th class="col-md-6">Remarks</th>
+                            <th class="col-sm-2">Amount</th>
+                            <th> Action</th>
+                          </tr>
+                        </thead>
+                        <tbody class="agreementTbody">
+                          <tr class="agreementData">
+                            <td>1</td>
+                            <td>
+                              <select class="form-control select">
+                                <option value="" selected>Select Reason</option>
+                                <option value="incomeTax">Income Tax</option>
+                                <option value="gst">GST</option>
+                                <option value="royalty">Royalty</option>
+                                <option value="lateDeduction">Late Deduction</option>
+                                <option value="securityDeposit">Security Deposit</option>
+                                <option value="anyOtherDeduction">Any Other Deduction</option>
+                              </select>
+                              
+                            </td>
+                            <td>
+                              <input type="text" class="form-control">
+                            </td>
+                            <td>
+                              <input type="text" class="form-control">
+                            </td>
+                            <td class="text-center">
+                              <a onclick="addAgreementTable()" href="javascript:void(0)" class="text-success font-18 abc"  title="Add"><i
+                                  class="fa-solid fa-plus"></i></a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-block mb-3">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <label class="col-form-label">Net Amount <span class="text-danger">*</span></label>
+                  </div>
+                  <input placeholder="" class="form-control" type="number" id="netAmount" value="0" disabled="">
+                </div>
+                <hr>
+
+                            <div class="input-block mb-3">
+                              <div class="d-flex align-items-center justify-content-between">
+                                <label class="col-form-label">Description <span class="text-danger">*</span></label>  
+                              </div>
+                              <textarea
+                                rows="4"
+                                id="description"
+                                class="form-control"
+                                placeholder="Enter your message here"
+                              ></textarea>
+                
+                              <div id="editor"></div>
+                            </div>
+                <hr>
+                
+                <div class="row d-none" id="uploaded_files">
+                  <div class="col-md-12">
+                    <label class="col-form-label">Uploaded Files</label>
+                    
+                    <div class="table-responsive">
+                      <table class="table table-hover table-white">
+                        <thead>
+                          <tr>
+                            <th class="col-sm-1">#</th>
+                            <th class="col-sm-10">Files</th>
+                            <th class="col-sm-1 text-center"> Action</th>
+                          </tr>
+                        </thead>
+                        <tbody   id="uploaded_files_tbodyone">
+                          <!-- <tr>
+                            <td>1</td>
+                            <td>
+                               <input class="form-control" type="name" disabled id="paymentDate">
+                            </td>
+                            <td class="text-center">
+                              <a href="javascript:void(0)" class="text-success font-18 "><i class="fa-solid fa-eye"></i></a>
+                            </td>
+                          </tr> -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                            <div class="input-block mb-3">
+                              <label class="col-form-label">Upload New Files</label>
+                              <input class="form-control" id="project-file" type="file" multiple />
+                            </div>
+                            <div class="submit-section" style="float: none;">
+                              <button type="submit" class="btn btn-primary submit-btn" id="submit">
+                                Submit
+                              </button>
+                            </div>
+                          </form>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="assets/js/jquery-3.7.1.min.js"
+      type="a584005f29a7ae81ebc6d9e7-text/javascript"
+    ></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script
+      src="assets/js/bootstrap.bundle.min.js"
+      type="a584005f29a7ae81ebc6d9e7-text/javascript"
+    ></script>
+
+    <script
+      src="assets/js/jquery.slimscroll.min.js"
+      type="a584005f29a7ae81ebc6d9e7-text/javascript"
+    ></script>
+
+    <script
+      src="assets/plugins/morris/morris.min.js"
+      type="a584005f29a7ae81ebc6d9e7-text/javascript"
+    ></script>
+    <script
+      src="assets/plugins/raphael/raphael.min.js"
+      type="a584005f29a7ae81ebc6d9e7-text/javascript"
+    ></script>
+    <script
+      src="assets/js/chart.js"
+      type="a584005f29a7ae81ebc6d9e7-text/javascript"
+    ></script>
+    <script
+      src="assets/js/greedynav.js"
+      type="a584005f29a7ae81ebc6d9e7-text/javascript"
+    ></script>
+
+    <script
+      src="assets/js/layout.js"
+      type="a584005f29a7ae81ebc6d9e7-text/javascript"
+    ></script>
+    <script
+      src="assets/js/theme-settings.js"
+      type="a584005f29a7ae81ebc6d9e7-text/javascript"
+    ></script>
+
+    <script
+      src="assets/js/app.js"
+      type="a584005f29a7ae81ebc6d9e7-text/javascript"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+      data-cf-settings="a584005f29a7ae81ebc6d9e7-|49"
+      defer
+    ></script>
+    <script type="module" src="./assets/custom/edit-project.js"></script>
+  </body>
+  <script src="./assets/custom/sidebar.js"></script>
+
+
+  <!-- Mirrored from smarthr.dreamstechnologies.com/html/template/tasks.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Sep 2024 06:20:59 GMT -->
+</html>

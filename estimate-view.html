@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
+  data-sidebar-image="none">
+
+<!-- Mirrored from  /html/template/estimate-view.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Sep 2024 06:26:28 GMT -->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords"
+    content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects">
+  <meta name="author" content="">
+  <title>Estimates   </title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/fevicons.png">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+  <link rel="stylesheet" href="assets/css/line-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/material.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <div class="main-wrapper">
+
+    <div id="header-placeholder"></div>
+
+    <div id="sidebar-placeholder"></div>
+
+
+
+    <div class="page-wrapper">
+
+      <div class="content container-fluid pb-0">
+
+        <div class="page-header">
+          <div class="row align-items-center">
+            <div class="col">
+              <h3 class="page-title">Estimate</h3>
+              <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="admin-dashboard.html">Dashboard</a></li>
+                <li class="breadcrumb-item active">Estimate</li>
+              </ul>
+            </div>
+            <div class="col-auto float-end ms-auto">
+              <div class="btn-group btn-group-sm">
+                <button onclick="handleClickToDownloadPdf()" class="btn btn-white">click here to download as a PDF</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card" id="generatePdfFile">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-6 m-b-20">
+                    <img src="assets/img/logo-shivaur-2.jpg" class="inv-logo" alt="Logo">
+                    <ul class="list-unstyled">
+                      <!-- <li>Shivor</li>
+                      <li>Delhi</li> -->
+                      <!-- <li>Dreamguy's Technologies</li>
+                      <li>3864 Quiet Valley Lane,</li>
+                      <li>Sherman Oaks, CA, 91403</li>
+                      <li>GST No:</li> -->
+                    </ul>
+                  </div>
+                  <div class="col-sm-6 m-b-20">
+                    <div class="invoice-details">
+                      <h3 id="estimatesId" class="text-uppercase">#<span id="estId">Estimate</span> / <span id="proNm">Project</span></h3>
+                      <ul class="list-unstyled">
+                        <li>Create Date: <span id="createDate"></span></li>
+                        <li>Expiry date: <span id="expiryDate"></span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-lg-12 m-b-20">
+                    <h5><b>Estimate to: </b><b id="clientName">Lucky Singh</b></h5>
+
+                    <ul class="list-unstyled">
+                      <li><b>Ph. No.: </b><span id="clientph"></span></li>
+                      <li><b>Email Id: </b><span id="clientMail"></span></li>
+                      <li id="clientAddr" style="width: 300px;"></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="" style="overflow: auto;">
+                  
+                <table class="table table-striped table-hover">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>ITEM</th>
+                      <th class="d-none d-sm-table-cell">DESCRIPTION</th>
+                      <th>UNIT COST</th>
+                      <th>QUANTITY</th>
+                      <th >TOTAL</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tableData"></tbody>
+                  
+                </table>
+                </div>
+
+                <div>
+                  <div class="row invoice-payment">
+                    <div class="col-sm-7">
+                    </div>
+                    <div class="col-sm-5">
+                      <div class="m-b-20">
+                        <div class="table-responsive no-border">
+                          <table class="table">
+                            <tbody>
+                              <tr>
+                                <th>Subtotal:</th>
+                                <td id="subTotal" class="text-end"></td>
+                              </tr>
+                              <tr>
+                                <th>Tax (<span id="taxType" class="text-regular"></span>):</th>
+                                <td id="taxAmt" class="text-end"></td>
+                              </tr>
+                              <tr>
+                                <th>Discount:</th>
+                                <td id="discountAmt" class="text-end"></td>
+                              </tr>
+                              <tr>
+                                <th>Total:</th>
+                                <td  class="text-end text-primary">
+                                  <h5 id="grandTotal"></h5>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="invoice-info">
+                    <h5>Other information:</h5>
+                    <p class="text-muted" id="otherInfo"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+   
+
+  <script src="assets/js/jquery-3.7.1.min.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script type="module" src="./assets/custom/viewEstimate.js"></script>
+
+  <script src="assets/js/bootstrap.bundle.min.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+
+  <script src="assets/js/jquery.slimscroll.min.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+
+  <script src="assets/plugins/morris/morris.min.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+  <script src="assets/plugins/raphael/raphael.min.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+  <script src="assets/js/chart.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+  <script src="assets/js/greedynav.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+
+  <script src="assets/js/layout.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+  <script src="assets/js/theme-settings.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+
+  <script src="assets/js/app.js" type="a584005f29a7ae81ebc6d9e7-text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+    data-cf-settings="a584005f29a7ae81ebc6d9e7-|49" defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js" integrity="sha512-w3u9q/DeneCSwUDjhiMNibTRh/1i/gScBVp2imNVAMCt6cUHIw6xzhzcPFIaL3Q1EbI2l+nu17q2aLJJLo4ZYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+</body>
+  <script src="./assets/custom/sidebar.js"></script>
+
+
+<!-- Mirrored from  /html/template/estimate-view.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Sep 2024 06:26:28 GMT -->
+
+</html>
