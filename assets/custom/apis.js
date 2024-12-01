@@ -26,6 +26,6 @@ export const estimate_API = `${domain}/estimates`;
 export const invoice_API = `${domain}/invoice`
 export const global_search_API = `${domain}/global-search`
 export const contractor_API = `${domain}/contractor`
-export const realTimeUpdate = ws; // Corrected: Removed syntax error
+// export const realTimeUpdate = ws; // Corrected: Removed syntax error
 // --------------------------------------------------------------
  
